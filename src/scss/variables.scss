@@ -1,0 +1,75 @@
+/*================
+    Variables
+==================*/
+
+// Font Family & Sizes
+$primary-font-family: 'Roboto', sans-serif;
+$secondary-font-family: 'Open Sans', sans-serif;
+$header-font-size: 24px;
+
+// Colors
+$bg-color: #F55555;
+$secondary-bg-color: #F3DFBF;
+$tertiary-bg-color: #F7F7F7;
+$btn-bg-color: #F87575;
+$color-white: white;
+$title-link-color: #5178C2;
+$comments-link-color: #7098E2;
+
+// Box Shadow
+$default-shadow: 0 6px 10px 0 rgba(104, 104, 104, 0.14), 0 1px 18px 0 rgba(104, 104, 104, 0.12),
+0 3px 5px -1px rgba(104, 104, 104, 0.3);
+
+// Breakpoints
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+// Mixins
+@mixin size($size) {
+    height: $size;
+    width: $size;
+}
+
+@mixin animation-transition-setup($seconds) {
+    -webkit-transition: all ease-out $seconds;
+    -moz-transition: all ease-out $seconds;
+    -ms-transition: all ease-out $seconds;
+    -o-transition: all ease-out $seconds;
+    transition: all ease-out $seconds;
+}
+
+@mixin fade-in-animation($animation-name, $seconds) {
+    -webkit-animation: $animation-name $seconds;
+    -moz-animation: $animation-name $seconds;
+    -ms-animation: $animation-name $seconds;
+    -o-animation: $animation-name $seconds;
+    animation: $animation-name $seconds;
+}
+
+
+@mixin fade-in-keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @-moz-keyframes #{$animation-name} {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @-o-keyframes #{$animation-name} {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @-ms-keyframes #{$animation-name} {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @keyframes #{$animation-name} {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+}
